@@ -1,0 +1,50 @@
+// Initiate Git
+git init
+//Default branch is master. To create another branch, we first need to commit somethning in master branch.
+//Create a new branch
+git branch <newbranchname>
+//switch from one branch to another
+git checkout <newbranchname>
+//Commit changes
+git commit <filename>
+// or
+git add <filenames> <directories>
+//and then
+git commit
+// Tell git to stop tracking a file
+git rm --cached <filename>
+// Tell git to stop tracking a directory
+git rm --cached -r <directory>
+// .gitignore contains list of all files that are being ignored during tracking
+// To reset git to a previous commit
+git log
+//If you want to temporarily go back to it, fool around, then come back to where you are, all you have to do is check out the desired commit:
+
+# This will detach your HEAD, that is, leave you with no branch checked out:
+git checkout 0d1d7fc32
+
+//Or if you want to make commits while you're there, go ahead and make a new branch while you're at it:
+
+git checkout -b old-state 0d1d7fc32
+
+//Hard delete unpublished commits
+
+//If, on the other hand, you want to really get rid of everything you've done since then, there are two possibilities. One, if you haven't published any of these commits, simply reset:
+
+# This will destroy any local modifications.
+# Don't do it if you have uncommitted work you want to keep.
+git reset --hard 0d1d7fc32
+
+# Alternatively, if there's work to keep:
+git stash
+git reset --hard 0d1d7fc32
+git stash pop
+# This saves the modifications, then reapplies that patch after resetting.
+# You could get merge conflicts, if you've modified things which were
+# changed since the commit you reset to.
+//when git has problems with push, it could be because the changes made in the remote repository is not committed.
+// There are two ways one could get around it. first do a git pull and then git push. If the commit is first commit
+// one could force git to push the data by using 'git push -f'
+
+//git fetch --all and then git reset -hard origin/master to pull all data perfectly.
+

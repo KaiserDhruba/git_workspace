@@ -1,0 +1,10 @@
+//To change the color of bash command prompt
+//First find out current Bash prompt
+echo $PS1
+// Then use: 
+\e[x;ym $PS1 \e[m
+//For example to change the color to red:
+export PS1="\e[0;31m[\u@\h \W]\$ \e[m"
+
+// To execute a bash command while logging in put the command
+in ~/.bashrc file

@@ -1,0 +1,32 @@
+List of Commands:
+-----------------
+---------------------
+:Navigation Commands:
+---------------------
+G=	Go to the end of documents
+gg=	Go to the begining of document
+w= 	Go to the begining of a word
+b=	Go to the end of the word
+h=	Move left
+j=	Move down
+k=	Move up
+l=	Move right
+0 = 	Move to the end of line
+ =	Move to the begining of line
+
+
+------------------
+:Editing Commands:
+------------------
+x=	Delete a character
+dw=	Delete a word	
+dd= 	Delete a line
+o=	Opening a new line
+yy=	Copy whole line
+p=	Paste
+
+
+------------------
+:Command promts:
+------------------
+:e=	Refresh a file
